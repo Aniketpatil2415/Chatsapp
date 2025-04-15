@@ -1,0 +1,14 @@
+chats: {
+  room1: {
+    msg1: {
+      sender: "aniket",
+      text: "Hello bhai!",
+      timestamp: "2025-04-15T15:00:00"
+    },
+    msg2: {
+      sender: "techi_dost",
+      text: "Hey bro!",
+      timestamp: "2025-04-15T15:00:05"
+    }
+  }
+}
