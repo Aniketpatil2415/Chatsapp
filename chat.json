@@ -1,14 +1,28 @@
-chats: {
-  room1: {
-    msg1: {
-      sender: "aniket",
-      text: "Hello bhai!",
-      timestamp: "2025-04-15T15:00:00"
+{
+  "users": {
+    "userId1": {
+      "username": "Aniket",
+      "email": "aniket@example.com"
     },
-    msg2: {
-      sender: "techi_dost",
-      text: "Hey bro!",
-      timestamp: "2025-04-15T15:00:05"
+    "userId2": {
+      "username": "Rohit",
+      "email": "rohit@example.com"
+    }
+  },
+  "chats": {
+    "roomId123": {
+      "messages": {
+        "msg1": {
+          "senderId": "userId1",
+          "text": "Hello!",
+          "timestamp": 1713185400000
+        },
+        "msg2": {
+          "senderId": "userId2",
+          "text": "Hi! How are you?",
+          "timestamp": 1713185450000
+        }
+      }
     }
   }
 }
