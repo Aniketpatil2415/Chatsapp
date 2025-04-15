@@ -1,0 +1,23 @@
+{
+  "rules": {
+    // Users section: Allows users to read and write their own data
+    "users": {
+      "$user_id": {
+        // Users can read and write their own data only
+        ".read": "auth != null && auth.uid === $user_id",
+        ".write": "auth != null && auth.uid === $user_id"
+      }
+    },
+    
+    // Chats section: Allows users to read and write messages only between themselves
+    "chats": {
+      "$sender_id": {
+        "$receiver_id": {
+          // Only the sender and receiver can read/write the chat
+          ".read": "auth != null && (auth.uid === $sender_id || auth.uid === $receiver_id)",
+          ".write": "auth != null && auth.uid === $sender_id"
+        }
+      }
+    }
+  }
+}
